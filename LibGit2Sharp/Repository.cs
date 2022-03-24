@@ -678,7 +678,7 @@ namespace LibGit2Sharp
             using (RemoteHandle remoteHandle = Proxy.git_remote_create_anonymous(repositoryHandle, url))
             {
                 var gitCallbacks = new GitRemoteCallbacks { version = 1 };
-                var proxyOptions = new GitProxyOptions { Version = 1 };
+                var proxyOptions = new GitProxyOptions { Version = 1, Type = GitProxyType.Auto };
 
                 if (credentialsProvider != null)
                 {
